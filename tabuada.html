@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <script>
+        function tabuada() {
+            let tabuada = document.getElementById("txtTabuada").value;
+            tabuada = tabuada.replace(",",".")
+            const div = document.getElementById("resultados");
+            div.innerHTML = '';
+            for (let li = 1; li <= 10; li++) {
+                if (tabuada != 0) {
+                    div.innerHTML += `<p>${tabuada} * ${li} = ${tabuada * li}</p>`
+                    document.getElementById("resultados").style.backgroundColor = "rgb(172, 172, 172)"
+                    document.getElementById("resultados").style.borderRadius = "10px"
+                }
+                else if(tabuada == 0){
+                    document.getElementById("resultados").style.backgroundColor = "white"
+                }
+            }
+        }
+    </script>
+    <style>
+        #resultados {
+            margin: 20px 28%;
+            width: 300px;
+            padding: 20px;
+        }
+
+        #resultados p {
+            margin: 10px 30px;
+        }
+
+        form {
+            padding: 20px;
+            border: 2px solid rgb(172, 172, 172);
+            border-radius: 10px;
+            width: 250px;
+            margin: 2px 30%
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <form>
+        <label for="txtTabuada">Tabuada desejada</label>
+        <input type="text" name="txtTabuada" id="txtTabuada" oninput="tabuada();">
+    </form>
+    <div id="resultados">
+
+    </div>
+
+</body>
+
+</html>

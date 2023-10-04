@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro</title>
+
+    <script>
+        function filtra() {
+            const filtro = document.getElementById("filtro").value.toLowerCase();
+            const lis = document.getElementsByTagName("li");
+            document.getElementsByClassName("li")
+            for (const li of lis) {
+                if (li.innerText.toLowerCase().startsWith(filtro)) {
+                    li.style.fontWeight = "bolder";
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form>
+        <label for="filtro">Qual nome desejada</label>
+        <input type="text" id="filtro" oninput="filtra();">
+    </form>
+    <div id="lista">
+        <ul class="nomes">
+            <li>
+                <p>Lucas Silva</p>
+            </li>
+            <li>
+                <p>Juliana Oliveira</p>
+            </li>
+            <li>
+                <p>Marcos Santos</p>
+            </li>
+            <li>
+                <p>Carolina Lima</p>
+            </li>
+            <li>
+                <p>Rafael Pereira</p>
+            </li>
+            <li>
+                <p>Mariana Souza</p>
+            </li>
+            <li>
+                <p>Pedro Oliveira</p>
+            </li>
+            <li>
+                <p>Larissa Almeida</p>
+            </li>
+            <li>
+                <p>Thiago Pereira</p>
+            </li>
+            <li>
+                <p>Fernanda Silva</p>
+            </li>
+            <li>
+                <p>Gustavo Rodrigues</p>
+            </li>
+            <li>
+                <p>Bruna Oliveira</p>
+            </li>
+            <li>
+                <p>João Santana</p>
+            </li>
+            <li>
+                <p>Camila Fernandes</p>
+            </li>
+            <li>
+                <p>Felipe Silva</p>
+            </li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>
