@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(196, 161, 161);
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: rgb(97, 119, 192);
+    margin: 100px 30%;
+    border: 2px solid rgb(77, 85, 161);
+    border-radius: 15px;
+    padding: 10px;
+    max-width: 600px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.3);
+}
+#filtro{
+    margin: 10px 30%;
+    font-size: 16px;
+}
+ul{
+    margin: 5px 25%;
+}
